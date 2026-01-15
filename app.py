@@ -6,8 +6,7 @@ if "colors" not in st.session_state:
 st.session_state.colors = {
 "Червен": 0,
 "Син": 0,
-"Зелен":
-0,
+"Зелен": 0,
 "Жълт": 0
 }
 if "sports" not in st.session_state:
@@ -30,12 +29,10 @@ st.subheader(" Резултати")
 # Графика за цветовете
 st.write("Любими цветове")
 colors_df = pd.DataFrame.from_dict(
-st.session_state.colors, orient="index", columns=["Брой"]
-)
+st.session_state.colors, orient="index", columns=["Брой"])
 st.bar_chart(colors_df)
 # Графика за спортовете
 st.write("Любими спортове")
-sports_df = pd.DataFrame.from_dict(
-)
+sports_df = pd.DataFrame.from_dict()
 st.session_state.sports, orient="index", columns=["Брой"]
 st.bar_chart(sports_df)
